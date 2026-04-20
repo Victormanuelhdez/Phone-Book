@@ -1,28 +1,23 @@
 package com.generation.agenda.services;
-import com.generation.agenda.models.Contacto;
-
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Comparator;
 
 public class AgendaServices {
-
-    //  Método de modificar teléfono
-    public void modificarTelefono(String nombre, String nuevoTelefono) {
-        for (Contacto c : agenda ) {
-            if (c.getNombre().equalsIgnoreCase(nombre)) {
-                c.setTelefono(nuevoTelefono);
-                System.out.println("Teléfono actualizado para " + nombre);
-                return;
-            }
+    // Listar contactos
+    public void listarContactos() {
+        if (contactos.isEmpty()) {
+            System.out.println("📭 La agenda está vacía.");
+            return;
         }
-        System.out.println("No se encontró el contacto para modificar.");
-    }
 
-    //  Método para eliminar teléfono
-    public void eliminarContacto(Contacto c) {
-        if (agenda.remove(c)) {
-            System.out.println("Contacto eliminado.");
-        } else {
-            System.out.println("El contacto no existe.");
+        contactos.sort(Comparator.comparing(Contacto::getNombre)
+                .thenComparing(Contacto::getApellido));
+
+        System.out.println("📑 Lista de contactos:");
+        for (Contacto c : contactos) {
+            System.out.println("👤 " + c.getNombre() + " " + c.getApellido() + " - 📞 " + c.getTelefono());
         }
     }
+
+
 }
