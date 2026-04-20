@@ -49,6 +49,7 @@ public class Contacto {
         public void setCorreo(String correo) {
             this.correo = correo;
         }
+
     //toSting
     @Override
     public String toString() {
