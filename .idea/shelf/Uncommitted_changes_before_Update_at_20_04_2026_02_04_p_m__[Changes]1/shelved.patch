@@ -1,0 +1,31 @@
+Index: src/com/generation/agenda/services/AgendaServices.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.generation.agenda.services;\r\n\r\npublic class AgendaServices {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/com/generation/agenda/services/AgendaServices.java b/src/com/generation/agenda/services/AgendaServices.java
+--- a/src/com/generation/agenda/services/AgendaServices.java	(revision 62bf568c9f414cf3d0415255f359a0e84b548cff)
++++ b/src/com/generation/agenda/services/AgendaServices.java	(date 1776715220572)
+@@ -1,4 +1,16 @@
+-package com.generation.agenda.services;
+-
+-public class AgendaServices {
+-}
++//package com.generation.agenda.services;
++//
++//import com.generation.agenda.models.AgendaModels;
++//
++//public class AgendaServices {
++//
++//    public String eliminarContacto (Contacto c){
++//        System.out.println("Gila");
++//    }
++//
++//
++//   public String modificarTelefono(String nombre, String apellido, String nuevoTelefono){
++//       System.out.println("Gila");
++//
++//   }
++//}

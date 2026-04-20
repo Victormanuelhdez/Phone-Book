@@ -1,0 +1,16 @@
+Index: src/com/generation/agenda/models/AgendaModels.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.generation.agenda.models;\r\n\r\npublic class AgendaModels {\r\n    public class Contacto{\r\n\r\n        private String nombre;\r\n        private String apellido;\r\n        private String telefono;\r\n        private String correo;\r\n\r\n        // Constructor completo\r\n        public Contacto(String nombre, String apellido, String telefono, String correo) {\r\n            this.nombre = nombre;\r\n            this.apellido = apellido;\r\n            this.telefono = telefono;\r\n            this.correo = correo;\r\n        }\r\n\r\n        // Getters y Setters\r\n\r\n\r\n        public String getNombre() {\r\n            return nombre;\r\n        }\r\n\r\n        public void setNombre(String nombre) {\r\n            this.nombre = nombre;\r\n        }\r\n\r\n        public String getApellido() {\r\n            return apellido;\r\n        }\r\n\r\n        public void setApellido(String apellido) {\r\n            this.apellido = apellido;\r\n        }\r\n\r\n        public String getTelefono() {\r\n            return telefono;\r\n        }\r\n\r\n        public void setTelefono(String telefono) {\r\n            this.telefono = telefono;\r\n        }\r\n\r\n        public String getCorreo() {\r\n            return correo;\r\n        }\r\n\r\n        public void setCorreo(String correo) {\r\n            this.correo = correo;\r\n        }\r\n    }\r\n\r\n    //toSting\r\n\r\n\r\n    @Override\r\n    public String toString() {\r\n        return \"AgendaModels{}\";\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/com/generation/agenda/models/AgendaModels.java b/src/com/generation/agenda/models/AgendaModels.java
+--- a/src/com/generation/agenda/models/AgendaModels.java	(revision 62bf568c9f414cf3d0415255f359a0e84b548cff)
++++ b/src/com/generation/agenda/models/AgendaModels.java	(date 1776714046472)
+@@ -1,6 +1,7 @@
+ package com.generation.agenda.models;
+ 
+ public class AgendaModels {
++
+     public class Contacto{
+ 
+         private String nombre;
