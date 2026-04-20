@@ -24,7 +24,7 @@ import com.generation.agenda.services.AgendaServices;
                 System.out.println("5. eliminarContacto");
                 System.out.println("6. modificarTelefono");
                 System.out.println("7. agendaLlena");
-                System.out.println("8. espacioLibres");
+                System.out.println("8. espaciosLibres");
                 System.out.println("9. Salir");
                 System.out.print("Opción: ");
 
@@ -114,7 +114,7 @@ import com.generation.agenda.services.AgendaServices;
 
                     case 8:
                         // Llama al método que muestra cuántos espacios libres quedan
-                        agenda.espacioLibres();
+                        agenda.espaciosLibres();
                         break;
 
                     case 9:
