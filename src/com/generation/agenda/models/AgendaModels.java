@@ -50,6 +50,7 @@ public class AgendaModels {
         public void setCorreo(String correo) {
             this.correo = correo;
         }
+<<<<<<< Updated upstream:src/com/generation/agenda/models/AgendaModels.java
     }
 
     //toSting
@@ -60,3 +61,21 @@ public class AgendaModels {
         return "AgendaModels{}";
     }
 }
+=======
+
+        //toSting
+
+        @java.lang.Override
+        public java.lang.String toString() {
+            return "Contacto{" +
+                    "nombre='" + nombre + '\'' +
+                    ", apellido='" + apellido + '\'' +
+                    ", telefono='" + telefono + '\'' +
+                    ", correo='" + correo + '\'' +
+                    '}';
+    }
+}
+
+
+
+>>>>>>> Stashed changes:src/com/generation/agenda/models/Contacto.java
