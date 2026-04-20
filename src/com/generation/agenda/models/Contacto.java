@@ -1,7 +1,6 @@
 package com.generation.agenda.models;
 
-public class AgendaModels {
-    public class Contacto{
+public class Contacto {
 
         private String nombre;
         private String apellido;
@@ -50,13 +49,12 @@ public class AgendaModels {
         public void setCorreo(String correo) {
             this.correo = correo;
         }
-    }
-
     //toSting
-
-
     @Override
     public String toString() {
         return "AgendaModels{}";
     }
-}
+    }
+
+
+
