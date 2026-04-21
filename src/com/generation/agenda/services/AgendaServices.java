@@ -87,7 +87,7 @@ public class AgendaServices {
             System.out.println("Contacto no encontrado.");
             return;
         }
-        System.out.println("Teléfono: " + agenda[idx].getTelefono());
+        System.out.println("Teléfono: " + agenda[idx].getTelefono() + "Correo: " + agenda[idx].getCorreo());
     }
 
     public void eliminarContacto(Contacto c) {

@@ -76,7 +76,7 @@ import com.generation.agenda.services.AgendaServices;
                         System.out.print("Apellido: ");
                         String a3 = scanner.nextLine();
 
-                        // Llama al método que busca el contacto y muestra su teléfono
+                        // Llama al método que busca el contacto y muestra su teléfono y correo
                         agenda.buscarContacto(n3, a3);
                         break;
 
