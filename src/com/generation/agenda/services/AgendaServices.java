@@ -56,7 +56,7 @@ public class AgendaServices {
             System.out.println("Error: la agenda está llena.");
             return;
         }
-        if (existeContacto(c)) {
+        if (existeContacto(c) == true) {
             System.out.println("Error: el contacto ya existe.");
             return;
         }
