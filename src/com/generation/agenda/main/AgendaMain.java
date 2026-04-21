@@ -17,15 +17,15 @@ import com.generation.agenda.services.AgendaServices;
 
             do {
                 System.out.println("\n--- AGENDA TELEFÓNICA ---");
-                System.out.println("1. añadirContacto");
-                System.out.println("2. existeContacto");
-                System.out.println("3. listarContactos");
-                System.out.println("4. buscarContacto");
-                System.out.println("5. eliminarContacto");
-                System.out.println("6. modificarTelefono");
-                System.out.println("7. agendaLlena");
-                System.out.println("8. espaciosLibres");
-                System.out.println("9. Salir");
+                System.out.println("--- Selecciona una de las siguientes opciones ---");
+                System.out.println("1. Añadir Contacto");
+                System.out.println("2. Existe Contacto");
+                System.out.println("3. Listar Contactos");
+                System.out.println("4. Buscar Contacto");
+                System.out.println("5. Eliminar Contacto");
+                System.out.println("6. Modificar Teléfono");
+                System.out.println("7. ¿Cuantos espacios libres hay?");
+                System.out.println("0. Salir");
                 System.out.print("Opción: ");
 
                 opcion = scanner.nextInt();
@@ -34,7 +34,7 @@ import com.generation.agenda.services.AgendaServices;
                 switch (opcion) {
 
                     case 1:
-                        // Solicita datos al usuario y crea un nuevo contacto
+                        // solicita datos al usuario y crea un nuevo contacto
                         System.out.print("Nombre: ");
                         String nombre = scanner.nextLine();
 
@@ -52,7 +52,7 @@ import com.generation.agenda.services.AgendaServices;
                         break;
 
                     case 2:
-                        // Solicita nombre y apellido para verificar si el contacto existe
+                        // solicita nombre y apellido para verificar si el contacto existe
                         System.out.print("Nombre: ");
                         String n2 = scanner.nextLine();
 
@@ -69,7 +69,7 @@ import com.generation.agenda.services.AgendaServices;
                         break;
 
                     case 4:
-                        // Solicita datos para buscar un contacto específico
+                        // solicita datos para buscar un contacto específico
                         System.out.print("Nombre: ");
                         String n3 = scanner.nextLine();
 
@@ -81,7 +81,7 @@ import com.generation.agenda.services.AgendaServices;
                         break;
 
                     case 5:
-                        // Solicita datos para eliminar un contacto
+                        // solicita datos para eliminar un contacto
                         System.out.print("Nombre: ");
                         String n4 = scanner.nextLine();
 
@@ -93,7 +93,7 @@ import com.generation.agenda.services.AgendaServices;
                         break;
 
                     case 6:
-                        // Solicita datos para modificar el teléfono de un contacto
+                        // solicita datos para modificar el teléfono de un contacto
                         System.out.print("Nombre: ");
                         String n5 = scanner.nextLine();
 
@@ -106,18 +106,12 @@ import com.generation.agenda.services.AgendaServices;
                         // Llama al método que actualiza el teléfono del contacto
                         agenda.modificarTelefono(n5, a5, nuevoTelefono);
                         break;
-
                     case 7:
-                        // Llama al método que indica si la agenda está llena
-                        agenda.agendaLlena();
-                        break;
-
-                    case 8:
                         // Llama al método que muestra cuántos espacios libres quedan
                         agenda.espaciosLibres();
                         break;
 
-                    case 9:
+                    case 0:
                         // Finaliza la ejecución del programa
                         System.out.println("Saliendo...");
                         break;
@@ -127,7 +121,7 @@ import com.generation.agenda.services.AgendaServices;
                         System.out.println("Opción inválida");
                 }
 
-            } while (opcion != 9);
+            } while (opcion != 0);
 
             scanner.close();
         }
