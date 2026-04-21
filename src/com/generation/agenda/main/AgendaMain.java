@@ -17,15 +17,14 @@ import com.generation.agenda.services.AgendaServices;
 
             do {
                 System.out.println("\n--- AGENDA TELEFÓNICA ---");
-                System.out.println("--- Selecciona una de las siguientes opciones ---");
+                System.out.println("--- Selecciona el numero de una de las siguientes opciones ---");
                 System.out.println("1. Añadir Contacto");
-                System.out.println("2. Existe Contacto");
-                System.out.println("3. Listar Contactos");
-                System.out.println("4. Buscar Contacto");
-                System.out.println("5. Eliminar Contacto");
-                System.out.println("6. Modificar Teléfono");
-                System.out.println("7. Modificar Correo");
-                System.out.println("8. ¿Cuantos espacios libres hay?");
+                System.out.println("2. Listar Contactos");
+                System.out.println("3. Buscar Contacto");
+                System.out.println("4. Eliminar Contacto");
+                System.out.println("5. Modificar Teléfono");
+                System.out.println("6. Modificar Correo");
+                System.out.println("7. ¿Cuantos espacios libres hay?");
                 System.out.println("0. Salir");
                 System.out.print("Opción: ");
 
@@ -53,35 +52,23 @@ import com.generation.agenda.services.AgendaServices;
                         break;
 
                     case 2:
-                        // solicita nombre y apellido para verificar si el contacto existe
-                        System.out.print("Nombre: ");
-                        String n2 = scanner.nextLine();
-
-                        System.out.print("Apellido: ");
-                        String a2 = scanner.nextLine();
-
-                        // Llama al método que verifica la existencia del contacto
-                        agenda.existeContacto(new Contacto(n2, a2, "", ""));
-                        break;
-
-                    case 3:
                         // Llama al método que lista todos los contactos ordenados
                         agenda.listarContactos();
                         break;
 
-                    case 4:
+                    case 3:
                         // solicita datos para buscar un contacto específico
                         System.out.print("Nombre: ");
                         String n3 = scanner.nextLine();
 
-                        System.out.print("Apellido: ");
+                        System.out.print(" Apellido: ");
                         String a3 = scanner.nextLine();
 
                         // Llama al método que busca el contacto y muestra su teléfono y correo
                         agenda.buscarContacto(n3, a3);
                         break;
 
-                    case 5:
+                    case 4:
                         // solicita datos para eliminar un contacto
                         System.out.print("Nombre: ");
                         String n4 = scanner.nextLine();
@@ -93,7 +80,7 @@ import com.generation.agenda.services.AgendaServices;
                         agenda.eliminarContacto(new Contacto(n4, a4, "", ""));
                         break;
 
-                    case 6:
+                    case 5:
                         // solicita datos para modificar el teléfono de un contacto
                         System.out.print("Nombre: ");
                         String n5 = scanner.nextLine();
@@ -107,21 +94,21 @@ import com.generation.agenda.services.AgendaServices;
                         // Llama al método que actualiza el teléfono del contacto
                         agenda.modificarCorreo(n5, a5, nuevoTelefono);
                         break;
-                    case 7:
+                    case 6:
                         // solicita datos para modificar el teléfono de un contacto
                         System.out.print("Nombre: ");
-                        String n7 = scanner.nextLine();
+                        String n6 = scanner.nextLine();
 
                         System.out.print("Apellido: ");
-                        String a7 = scanner.nextLine();
+                        String a6 = scanner.nextLine();
 
                         System.out.print("Nuevo correo: ");
                         String nuevoCorreo = scanner.nextLine();
 
                         // Llama al método que actualiza el teléfono del contacto
-                        agenda.modificarCorreo(n7, a7, nuevoCorreo);
+                        agenda.modificarCorreo(n6, a6, nuevoCorreo);
                         break;
-                    case 8:
+                    case 7:
                         // Llama al método que muestra cuántos espacios libres quedan
                         agenda.espaciosLibres();
                         break;
