@@ -84,7 +84,7 @@ public class AgendaServices {
     public void buscarContacto(String nombre, String apellido) {
         int idx = indiceDe(nombre, apellido);
         if (idx == -1) {
-            System.out.println("Contacto no encontrado.");
+            System.out.println(nombre + apellido + " no es un contacto en la agenda.");
             return;
         }
         System.out.println("Teléfono: " + agenda[idx].getTelefono() + "Correo: " + agenda[idx].getCorreo());
@@ -92,6 +92,7 @@ public class AgendaServices {
 
     public void eliminarContacto(Contacto c) {
         int idx = indiceDe(c.getNombre(), c.getApellido());
+        String nombre = c.getNombre(), apellido = c.getApellido();
         if (idx == -1) {
             System.out.println("No se pudo eliminar: el contacto no existe.");
             return;
@@ -102,7 +103,7 @@ public class AgendaServices {
         }
         agenda[totalContactos - 1] = null;
         totalContactos--;
-        System.out.println("Contacto eliminado correctamente.");
+        System.out.println( nombre + " " + apellido + " eliminado correctamente de la agenda.");
     }
 
     public void modificarTelefono(String nombre, String apellido, String nuevoTelefono) {
