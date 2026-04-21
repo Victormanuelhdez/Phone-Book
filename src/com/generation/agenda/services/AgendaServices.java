@@ -116,6 +116,16 @@ public class AgendaServices {
         System.out.println("Teléfono actualizado correctamente.");
     }
 
+    public void modificarCorreo(String nombre, String apellido, String nuevoCorreo) {
+        int idx = indiceDe(nombre, apellido);
+        if (idx == -1) {
+            System.out.println("No se pudo modificar: el contacto no existe.");
+            return;
+        }
+        agenda[idx].setCorreo(nuevoCorreo);
+        System.out.println("Correo actualizado correctamente.");
+    }
+
     // Búsqueda interna reutilizada por buscar, eliminar y modificar para evitar duplicar bucles.
     private int indiceDe(String nombre, String apellido) {
         if (nombre == null || apellido == null) return -1;

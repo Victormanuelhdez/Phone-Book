@@ -24,7 +24,8 @@ import com.generation.agenda.services.AgendaServices;
                 System.out.println("4. Buscar Contacto");
                 System.out.println("5. Eliminar Contacto");
                 System.out.println("6. Modificar Teléfono");
-                System.out.println("7. ¿Cuantos espacios libres hay?");
+                System.out.println("7. Modificar Correo");
+                System.out.println("8. ¿Cuantos espacios libres hay?");
                 System.out.println("0. Salir");
                 System.out.print("Opción: ");
 
@@ -104,9 +105,23 @@ import com.generation.agenda.services.AgendaServices;
                         String nuevoTelefono = scanner.nextLine();
 
                         // Llama al método que actualiza el teléfono del contacto
-                        agenda.modificarTelefono(n5, a5, nuevoTelefono);
+                        agenda.modificarCorreo(n5, a5, nuevoTelefono);
                         break;
                     case 7:
+                        // solicita datos para modificar el teléfono de un contacto
+                        System.out.print("Nombre: ");
+                        String n7 = scanner.nextLine();
+
+                        System.out.print("Apellido: ");
+                        String a7 = scanner.nextLine();
+
+                        System.out.print("Nuevo correo: ");
+                        String nuevoCorreo = scanner.nextLine();
+
+                        // Llama al método que actualiza el teléfono del contacto
+                        agenda.modificarCorreo(n7, a7, nuevoCorreo);
+                        break;
+                    case 8:
                         // Llama al método que muestra cuántos espacios libres quedan
                         agenda.espaciosLibres();
                         break;
